@@ -33,7 +33,7 @@ const Sidebar = ({ user }: SiderbarProps) => {
             <Link
               href={item.route}
               key={item.label}
-              className={cn("sidebar-link", { "bg-bank-gradient": isActive })}
+              className={cn("flex gap-3 items-center py-1 md:p-3 2xl:p-4 rounded-lg justify-center xl:justify-start", { "bg-bank-gradient": isActive })}
             >
               <div className="relative size-6">
                 <Image
@@ -51,7 +51,12 @@ const Sidebar = ({ user }: SiderbarProps) => {
             </Link>
           );
         })}
+
+
+        USER
       </nav>
+
+      FOOTER
     </section>
   );
 };
