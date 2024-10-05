@@ -21,11 +21,13 @@ import {
 import { Input } from "@/components/ui/input";
 import CustomInput from "./CustomInput";
 import { authFormSchema } from "@/lib/utils";
+import { Eye, EyeOff } from "lucide-react";
 
 const AuthForm = ({ type }: { type: string }) => {
   const router = useRouter();
   const [user, setUser] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState<boolean>(false);
 
   const formSchema = authFormSchema(type);
   // 1. Define your form.
@@ -112,7 +114,22 @@ const AuthForm = ({ type }: { type: string }) => {
                 control={form.control}
                 name="password"
                 label="Password"
+                type={showPassword ? "text" : "password"}
                 placeholder="Enter your password"
+                rightIcon={
+                  showPassword ? (
+                    <Eye
+                      className="cursor-pointer"
+                      onClick={() => setShowPassword(!showPassword)}
+                    />
+                  ) : (
+                    <EyeOff
+                      className="cursor-pointer"
+                      onClick={() => setShowPassword(!showPassword)}
+                    />
+                  )
+                }
+
               />
 
               <div className="flex flex-col gap-4">

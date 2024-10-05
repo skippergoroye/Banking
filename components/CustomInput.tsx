@@ -21,9 +21,11 @@ interface CustomInput {
   name: FieldPath<z.infer<typeof formSchema>>;
   label: string;
   placeholder: string;
+  rightIcon?: React.ReactNode;
+  type?: string;
 }
 
-const CustomInput = ({ control, name, label, placeholder }: CustomInput) => {
+const CustomInput = ({ control, type, name, label, placeholder, rightIcon }: CustomInput) => {
   return (
     <FormField
     control={control}
@@ -38,8 +40,9 @@ const CustomInput = ({ control, name, label, placeholder }: CustomInput) => {
             <Input 
               placeholder={placeholder}
               className="text-16 placeholder:text-16 h-12 rounded-lg border border-bankGradient text-gray-900 placeholder:text-gray-500"
-              type={name === 'password' ? 'password' : 'text'}
+              type={type}
               {...field}
+              rightIcon={rightIcon}
             />
           </FormControl>
           <FormMessage className="text-12 text-red-500 mt-2" />
