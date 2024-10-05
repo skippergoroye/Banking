@@ -1,6 +1,7 @@
 import Image from "next/image";
 import MobileNav from "@/components/MobileNav";
 import Sidebar from "@/components/Sidebar";
+import { redirect } from "next/navigation";
 
 export default function RootLayout({
   children,
@@ -8,6 +9,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const loggedIn = { firstName: "Adrain", lastName: "JSM" };
+
+
+  if(!loggedIn) redirect('/sign-in')
 
   return (
     <main className="flex w-full h-screen font-inter">
