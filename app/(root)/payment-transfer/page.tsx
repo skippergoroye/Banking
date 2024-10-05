@@ -1,11 +1,20 @@
-import React from 'react'
+import React from "react";
+import HeaderBox from "@/components/HeaderBox";
+import  PaymentTransferForm from "@/components/PaymentTransferForm";
 
 const Transfer = () => {
   return (
-    <div>
-      Transfer
-    </div>
-  )
-}
+    <div className="flex max-h-screen w-full flex-col gap-8 overflow-y-scroll bg-gray-25 px-5 lg:px-8 py-7 lg:py-12">
+      <HeaderBox
+        title="Payment Transfer"
+        subtext="Please provide any specific details or notes related to the payment transfer"
+      />
 
-export default Transfer
+      <section className="size-full pt-5">
+        <PaymentTransferForm accounts={[]}  />
+      </section>
+    </div>
+  );
+};
+
+export default Transfer;
