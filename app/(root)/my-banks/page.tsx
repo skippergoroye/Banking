@@ -1,6 +1,7 @@
 import HeaderBox from "@/components/HeaderBox";
 import React from "react";
 
+
 const MyBank = () => {
   return (
     <section className="flex">
@@ -10,11 +11,19 @@ const MyBank = () => {
           subtext="Effortlessly manage your banking activites."
         />
 
-
-<HeaderBox
+        <HeaderBox
           title="My Bank Accounts"
           subtext="Effortlessly manage your banking activites."
         />
+        <HeaderBox
+          title="My Bank Accounts"
+          subtext="Effortlessly manage your banking activites."
+        />
+        <HeaderBox
+          title="My Bank Accounts"
+          subtext="Effortlessly manage your banking activites."
+        />
+
         <HeaderBox
           title="My Bank Accounts"
           subtext="Effortlessly manage your banking activites."
@@ -24,17 +33,7 @@ const MyBank = () => {
           subtext="Effortlessly manage your banking activites."
         />
 
-
-<HeaderBox
-          title="My Bank Accounts"
-          subtext="Effortlessly manage your banking activites."
-        />
         <HeaderBox
-          title="My Bank Accounts"
-          subtext="Effortlessly manage your banking activites."
-        />
-
-<HeaderBox
           title="My Bank Accounts"
           subtext="Effortlessly manage your banking activites."
         />
